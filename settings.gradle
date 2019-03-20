@@ -1,1 +1,1 @@
-include ':app', ':NiceVideoCore'
+include ':app', ':nice-video-android'
