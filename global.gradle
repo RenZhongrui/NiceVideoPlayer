@@ -1,0 +1,36 @@
+
+ext {
+    // 支持库版本号
+    supportLibraryVersion = '25.3.1'
+    
+    // Android API 信息
+    android = [apkName             :'agreesdk-package', // 配置打包后的apk的名称
+               compileSdkVersion   : 26,   //编译的SDK版本
+               buildToolsVersion   : '26.0.2',  //
+               applicationId       : '',  //应用Id
+               minSdkVersion       : 19,    //兼容的最低SDK版本
+               targetSdkVersion    : 28,    //用于提高指定版本的设备上程序运行体验
+               versionCode         : 1,     //版本号
+               versionName          : '1.0.0',  //版本名
+               multiDexEnabled     : true]     //添加多dex分包支持
+
+    proguard = [
+            minifyEnabled: true,
+            shrinkResources: true
+    ]
+    
+    // 签名配置
+    signConfigs = ['storeFile'    : '../keystore/release.keystore',   //签名文件uri
+                   'storePassword': '123456',                         //密匙库口令
+                   'keyAlias'     : 'agree-release-key',              //签名别名
+                   'keyPassword'  : '123456']                         //签名口令
+    
+    // 依赖包管理
+    dependencies = ['libSupportV7'         : 'com.android.support:appcompat-v7:' + supportLibraryVersion,
+                  'libSupportV4'           : 'com.android.support:appcompat-v4:' + supportLibraryVersion,
+                  'support_design'         : 'com.android.support:design:' + supportLibraryVersion,
+                  'support_annotations'    : 'com.android.support:support-annotations:' + supportLibraryVersion,
+                  'libRecyclerview'        : 'com.android.support:recyclerview-v7:' + supportLibraryVersion,
+                  'support_multidex'       : 'com.android.support:multidex:1.0.2',
+                  'libCircleImageView'     : 'de.hdodenhof:circleimageview:2.1.0']
+}
