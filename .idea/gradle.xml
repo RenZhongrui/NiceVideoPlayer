@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/ijkplayer-java" />
             <option value="$PROJECT_DIR$/nice-video-android" />
           </set>
         </option>
