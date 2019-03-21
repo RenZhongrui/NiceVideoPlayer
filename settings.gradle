@@ -1,1 +1,1 @@
-include ':app', ':nice-video-android'
+include ':app', ':nice-video-android', ':ijkplayer-java'
